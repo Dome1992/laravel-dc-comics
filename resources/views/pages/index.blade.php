@@ -3,5 +3,15 @@
     <title>Home</title>
 @endsection
 @section('content')
-    <h1>Hello, World!</h1>
+    <h1>Comic</h1>
+    <ul>
+        @foreach ($comic as $comic)
+
+        <li>
+            {{ $comic -> titolo }}:
+            {{ $comic -> autore }}
+            {{ $comic -> editore }}
+        </li>
+        @endforeach
+    </ul>
 @endsection
