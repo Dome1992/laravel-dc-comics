@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
+
+            //DEFINIZIONE CAMPI DELLA TABELLA
+            $table->string('titolo');
+            $table->string('autore');
+            $table->string('editore');
+
+            
             $table->timestamps();
         });
     }
