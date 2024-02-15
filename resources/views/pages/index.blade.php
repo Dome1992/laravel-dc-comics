@@ -8,7 +8,10 @@
         @foreach ($comics as $comic)
 
         <li>
-            {{ $comic -> titolo }}:
+            <b>
+                {{ $comic -> titolo }}:
+            </b>
+            
             {{ $comic -> autore }}
             {{ $comic -> editore }}
         </li>
