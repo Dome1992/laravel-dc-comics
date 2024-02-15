@@ -10,7 +10,7 @@ class MainController extends Controller
 {
     public function index() {
 
-        $comic = Comic :: all();
-        return view('pages.index', compact ('comic'));
+        $comics = Comic :: all();
+        return view('pages.index', compact ('comics'));
     }
 }

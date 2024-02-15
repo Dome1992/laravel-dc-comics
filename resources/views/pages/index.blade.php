@@ -5,7 +5,7 @@
 @section('content')
     <h1>Comic</h1>
     <ul>
-        @foreach ($comic as $comic)
+        @foreach ($comics as $comic)
 
         <li>
             {{ $comic -> titolo }}:
