@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
 
             //DEFINIZIONE CAMPI DELLA TABELLA
-            $table->string('titolo');
-            $table->string('autore');
-            $table->string('editore');
+            $table->string('titolo', 255);
+            $table->string('autore', 255);
+            $table->string('editore', 255);
 
-            
+
             $table->timestamps();
         });
     }
