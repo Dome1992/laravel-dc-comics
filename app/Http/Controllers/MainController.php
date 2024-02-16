@@ -26,7 +26,9 @@ class MainController extends Controller
      */
     public function create()
     {
-        //
+        
+
+        return view('pages.create');
     }
 
     /**
@@ -37,7 +39,17 @@ class MainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request -> all();
+
+        $nuovo_fumetto = new Comic();
+
+        $nuovo_fumetto -> titolo = $data['titolo'];
+        $nuovo_fumetto -> autore = $data['autore'];
+        $nuovo_fumetto -> editore = $data['editore'];
+
+        $nuovo_fumetto -> save();
+
+        return redirect() -> route('dettagliofumetto.show', $nuovo_fumetto -> id);
     }
 
     /**
@@ -48,7 +60,7 @@ class MainController extends Controller
      */
     public function show($id)
     {
-        // POSSO CHIAMARE LA VARIABILE COME VOGLIO, BASTA RICHIAMARLA UGUALE NEL SUO APPOSTO SHO.BLADE.PHP
+        // POSSO CHIAMARE LA VARIABILE COME VOGLIO, BASTA RICHIAMARLA UGUALE NEL SUO APPOSTO SHOw.BLADE.PHP
         $fumetto = Comic :: find($id);
 
         return view('pages.show', compact ('fumetto'));

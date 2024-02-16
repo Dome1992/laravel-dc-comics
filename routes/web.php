@@ -8,5 +8,13 @@ use App\Http\Controllers\MainController;
 Route::get('/', [MainController :: class,'index']);
 
 // ROTTA PER IL METODO SHOW
-Route::get('/pippo/{id}', [MainController :: class,'show'])
-    -> name ('pippo.show');
+Route::get('/dettagliofumetto/{id}', [MainController :: class,'show'])
+    -> name ('dettagliofumetto.show');
+
+// ROTTA PER IL MOTODO CREATE
+Route::get('/creanuovofumetto/create', [MainController :: class,'create'])
+    -> name ('creanuovofumetto.create');
+
+Route::post('/creanuovofumetto', [MainController :: class,'store'])
+    -> name ('creanuovofumetto.store');
+
