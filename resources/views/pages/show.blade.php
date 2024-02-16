@@ -5,13 +5,16 @@
 @section('content')
     
     <h2> 
+
         [
-          {{ $comic -> id }}   
+          {{ $fumetto -> id }}   
         ]
         Fumetto:
-        {{ $comic -> titolo }}
-                
-        {{ $comic -> autore }}   
-        {{ $comic -> editore }}
+        <p><b>Titolo:</b> {{ $fumetto -> titolo }}</p>
+        
+        <p><b>Autore:</b>{{ $fumetto -> autore }}</p>   
+        <p><b>Editore:</b>{{ $fumetto -> editore }}</p>
+
+        
     </h2>
 @endsection

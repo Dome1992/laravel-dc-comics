@@ -48,10 +48,10 @@ class MainController extends Controller
      */
     public function show($id)
     {
-        
-        $comics = Comic :: find($id);
+        // POSSO CHIAMARE LA VARIABILE COME VOGLIO, BASTA RICHIAMARLA UGUALE NEL SUO APPOSTO SHO.BLADE.PHP
+        $fumetto = Comic :: find($id);
 
-        return view('pages.show', compact ('comics'));
+        return view('pages.show', compact ('fumetto'));
     }
 
     /**
