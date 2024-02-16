@@ -9,10 +9,10 @@
 
         <li>
             <a href="
-            <b>
+            
                 {{ route('pippo.show', $comic -> id) }}
-                <!-- {{ $comic -> titolo }} -->
-            </b>
+                
+           
             ">
             {{ $comic -> autore }}
             {{ $comic -> editore }}
