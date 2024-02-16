@@ -48,7 +48,10 @@ class MainController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        $comics = Comic :: find($id);
+
+        return view('pages.show', compact ('comics'));
     }
 
     /**

@@ -17,8 +17,8 @@ class ComicFactory extends Factory
     public function definition()
     {
         return [
-            'titolo' => fake() -> name(),
-            'autore' => fake() -> name(),
+            'titolo' => fake() -> words(3, true),
+            'autore' => fake() -> sentence(),
             'editore'=> fake() -> company(),
         ];
     }
