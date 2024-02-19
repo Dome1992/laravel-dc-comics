@@ -16,6 +16,10 @@
             {{ $comic -> autore }}
             {{ $comic -> editore }}
             </a>
+
+            <a  class="mx-3" href="{{ route('aggiornanuovofumetto.edit', $comic -> id) }}">
+                MODIFICA FUMETTO
+            </a>
             
         </li>
         @endforeach

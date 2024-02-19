@@ -18,3 +18,11 @@ Route::get('/creanuovofumetto/create', [MainController :: class,'create'])
 Route::post('/creanuovofumetto', [MainController :: class,'store'])
     -> name ('creanuovofumetto.store');
 
+// ROTTA PER IL METODO EDIT/UPDATE
+Route::get('/aggiornanuovofumetto/{id}/edit', [MainController :: class,'edit'])
+    -> name ('aggiornanuovofumetto.edit');
+
+Route::post('/aggiornanuovofumetto/{id}', [MainController :: class,'update'])
+    -> name ('aggiornanuovofumetto.update');
+
+

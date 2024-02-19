@@ -74,7 +74,10 @@ class MainController extends Controller
      */
     public function edit($id)
     {
-        //
+        // POSSO CHIAMARE LA VARIABILE COME VOGLIO, BASTA RICHIAMARLA UGUALE NEL SUO APPOSTO SHOw.BLADE.PHP
+        $fumetto = Comic :: find($id);
+
+        return view('pages.edit', compact ('fumetto'));
     }
 
     /**
@@ -86,7 +89,19 @@ class MainController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request -> all();
+
+        $fumetto = new Comic();
+
+        $fumetto -> titolo = $data['titolo'];
+        $fumetto -> autore = $data['autore'];
+        $fumetto -> editore = $data['editore'];
+
+        $fumetto -> save();
+
+       
+
+        return redirect() -> route('dettagliofumetto.show', $fumetto -> id);
     }
 
     /**
